@@ -4,30 +4,42 @@ import random
 
 number = random.randint(-10000, 10000)
 
+no = number
 
+if no < 0:
 
-if number < 0:
+    no *= -1
 
-    num = number * -1
+last_digit = no % 10
 
-    num = num % 10
+if last_digit > 5 and number < 0:
 
-    num = num * -1
+    last_digit *= -1
 
-else:
+    print(f"Last digit of {number:d} is {last_digit:d}"
 
-    num = number % 10
+          f" and is less than 6 and not 0")
 
-print("Last digit of {}".format(number), end=' ')
+elif last_digit > 5 and number > 0:
 
-if num > 5:
+    print(f"Last digit of {number:d} is {last_digit:d}"
 
-    print("is {} and is greater than 5".format(num))
+          f" and is greater than 5")
 
-elif num == 0:
+elif last_digit == 0:
 
-    print("is {} and is 0".format(num))
+    print(f"Last digit of {number:d} is {last_digit:d} and is 0")
 
-elif num < 6 and num != 0:
+elif last_digit < 6 and last_digit != 0 and number < 0:
 
-    print("is {} and is less than 6 and not 0".format(num))
+    last_digit *= -1
+
+    print(f"Last digit of {number:d} is {last_digit:d}"
+
+          f" and is less than 6 and not 0")
+
+elif last_digit < 6 and last_digit != 0 and number > 0:
+
+    print(f"Last digit of {number:d} is {last_digit:d}"
+
+          f" and is less than 6 and not 0")
