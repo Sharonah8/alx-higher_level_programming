@@ -2,8 +2,16 @@
 
 def remove_char_at(str, n):
 
-    part = str[:n]
+    copy = ''
 
-    parts = str[n+1:]
+    if len(str) == 0:
 
-    return part + parts
+        return str
+
+    for i in range(len(str)):
+
+        if i != n:
+
+            copy += str[i]
+
+    return copy
