@@ -2,8 +2,6 @@
 
 for i in range(97, 123):
 
-        if i == 101 or i == 113:
+    if chr(i) != 'q' and chr(i) != 'e':
 
-                    continue
-
-                    print("{:c}".format(i), end='')
+        print("{}".format(chr(i)), end='')
