@@ -1,15 +1,13 @@
 #!/usr/bin/python3
 
-import hidden_4
-def main():
-
-    for i in dir(hidden_4):
-
-        if not (i[0] == '_' and i[1] == '_'):
-
-            print(i)
-
-
 if __name__ == "__main__":
 
-    main()
+    from hidden_4 import *
+
+    arr = dir()
+
+    for i in range(0, len(arr)):
+
+        if arr[i][0:2] != "__":
+
+            print("{}".format(arr[i]))
