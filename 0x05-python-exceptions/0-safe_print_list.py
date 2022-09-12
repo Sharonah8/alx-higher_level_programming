@@ -2,42 +2,26 @@
 
 def safe_print_list(my_list=[], x=0):
 
-    '''
+    try:
 
-    safe_print_list - prints x elememts of a list.
-
-    Args:
-
-        @my_list: list of elements to print.
-
-        x: The number of elements to print from my_list.
-
-    Returns:
-
-        The number of elements printed.
-
-    Author:
-
-        Felix Obianozie
-
-    '''
-
-    count = 0
-
-    if (x > 0):
+        num = 0
 
         for i in range(x):
 
-            try:
+            print(my_list[i], end="")
 
-                print(f"{my_list[i]}", end="")
+            num += 1
 
-                count = count + 1
+            for x in range(num):
 
-            except Exception:
+                print("", end="")
 
-                break
+        print()
 
-    print()
+        return num
 
-    return
+    except IndexError:
+
+        print()
+
+        return num
