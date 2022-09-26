@@ -3,7 +3,6 @@
 """defining the function lookup"""
 
 
-
 def lookup(obj):
 
     """returns list object"""
