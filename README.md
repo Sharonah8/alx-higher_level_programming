@@ -1,1 +1,1 @@
-Python programming basics	
+More SQL queries
